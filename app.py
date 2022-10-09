@@ -2,9 +2,8 @@ import os
 from flask import Flask
 from faker import Faker
 
-
 import requests
-
+import pandas as pd
 
 
 
@@ -24,7 +23,15 @@ def red_method():
 
 
 def user_data_method():
-    pass
+    """Function generate 100 random users"""
+    for i in range(101):
+        name = fake.name()
+        email = fake.email()
+        response = {
+            "name": name,
+            "email": email
+        }
+    return (response)
 
 
 def red_csv_method():
@@ -90,4 +97,3 @@ def astros_method():
     return astros.format(
         astronauts_list=astronauts_list,
         astronauts_count=responseJSON.get('number'))
-
