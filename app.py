@@ -1,15 +1,18 @@
 import os
 from flask import Flask
 from faker import Faker
+import requests
+import pandas as pd
+
+
+
+
 
 fake = Faker()
 
 app = Flask(__name__)
 
 
-@app.route('/')
-def red_method():
-    pass
 
 
 def user_data_method():
@@ -23,10 +26,3 @@ def user_data_method():
         }
     return (response)
 
-
-def red_csv_method():
-    pass
-
-
-def astros_method():
-    pass
