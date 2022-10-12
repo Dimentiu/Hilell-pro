@@ -1,0 +1,5 @@
+python3 -m venv .venv
+source .venv/bin/activate
+pip install requests
+pip freeze > requirement.txt
+pip install Flask
