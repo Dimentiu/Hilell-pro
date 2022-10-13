@@ -2,6 +2,14 @@ import datetime
 
 from django.db import models
 from django.utils import timezone
+from django.contrib import admin
+
+
+@admin.display(
+        boolean=True,
+        ordering='pub_date',
+        description='Published recently?',
+    )
 
 
 class Question(models.Model):
