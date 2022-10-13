@@ -7,4 +7,5 @@ pip freeze > requirements.txt
 python manage.py startapp polls созд приложения
 manage.py migrate
  ./manage.py makemigrations
+  DJANGO_SECRET_KEY=123123212123 python manage.py runserver
   ./manage.py shell
